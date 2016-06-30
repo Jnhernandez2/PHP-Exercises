@@ -3,4 +3,4 @@
 $firstName = 'John';
 $lastName = 'Hernandez';
 
-echo 'Hello! My name is ' . $firstName . ' ' . $lastName;
+echo 'Hello! My name is ' . $firstName . ' ' . $lastName . PHP_EOL;
