@@ -1,8 +1,9 @@
 <?php
 
-$a = 0;
+$a = 100;
 
 do {
 	echo '$a equals to ' . $a, PHP_EOL;
-	$a += 2;
-} while ($a <= 100);
+	$a -= 5;
+} while ($a >= (-10));
+
