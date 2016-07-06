@@ -8,9 +8,25 @@
  $dayOfWeek = date('N');
 
  switch($dayOfWeek) {
-     case 1:
-         // Output Monday
-     case 2:
-         // Output Tuesday
-     // etc through day 7
- }
+    case 1:
+        echo "Today is Monday!\n";
+        break;
+    case 2:
+        echo "Today is Tuesday!\n";
+        break;
+    case 3:
+    	echo "Today is Wednesday!\n";
+    	break;
+    case 4:
+    	echo "Today is Thursday!\n";
+    	break;
+    case 5:
+    	echo "Today is Friday!\n";
+    	break;
+    case 6:
+    	echo "Today is Saturday!\n";
+    	break;
+    case 7:
+    	echo "Today is Sunday Sunday SUNDAY!!!\n";
+    	break;
+ };
