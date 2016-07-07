@@ -28,16 +28,13 @@ foreach ($subjects as $array) {
 	$actualGrade[] = (int)$array['grade'];
 }
 var_dump($actualGrade);
-$average = 0;
 
-function calculateAverage($array) {
-	$total = 0;
-	foreach ($array as $number) {
-		$number += $number;
-	}
-	$total = $number;
+
+function calculateAverage($actualGrade) {
+	$total = array_sum($actualGrade);
 	echo $total, PHP_EOL;
-	$average = $total / count($number);
+	$average = 0;
+	$average = $total / count($actualGrade);
 	return $average;
 }	
 
