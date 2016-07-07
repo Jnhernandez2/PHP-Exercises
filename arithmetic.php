@@ -3,10 +3,10 @@
 function add($a, $b)
 {
 	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.");
+		fwrite(STDERR, "$a should be a numeric value.\n");
 		exit;
 	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.");
+		fwrite(STDERR, "$b should be a numeric value.\n");
 		exit;
 	}
 
@@ -16,10 +16,10 @@ function add($a, $b)
 function subtract($a, $b)
 {
 	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.");
+		fwrite(STDERR, "$a should be a numeric value.\n");
 		exit;
 	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.");
+		fwrite(STDERR, "$b should be a numeric value.\n");
 		exit;
 	}
 
@@ -30,10 +30,10 @@ function subtract($a, $b)
 function multiply($a, $b)
 {
 	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.");
+		fwrite(STDERR, "$a should be a numeric value.\n");
 		exit;
 	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.");
+		fwrite(STDERR, "$b should be a numeric value.\n");
 		exit;
 	}
 
@@ -44,11 +44,15 @@ function multiply($a, $b)
 function divide($a, $b)
 {
 	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.");
+		fwrite(STDERR, "$a should be a numeric value.\n");
 		exit;
 	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.");
+		fwrite(STDERR, "$b should be a numeric value.\n");
 		exit;
+	}
+
+	if ($a == 0 || $b == 0) {
+		fwrite(STDERR, "You cannot divide by zero.\n")
 	}
 
     return $a / $b;
@@ -58,10 +62,10 @@ function divide($a, $b)
 function modulus($a, $b)
 {
 	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.");
+		fwrite(STDERR, "$a should be a numeric value.\n");
 		exit;
 	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.");
+		fwrite(STDERR, "$b should be a numeric value.\n");
 		exit;
 	}
 
