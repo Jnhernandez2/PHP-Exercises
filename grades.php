@@ -22,17 +22,17 @@ do {
 	$subjects[] = ['name' => $name, 'grade' => $grade];
 } while (confirm("Is there another subject you'd like to add? Enter '1' for yes, or enter 0 for no: "));
 
-var_dump($subjects);
+//var_dump($subjects);
 $actualGrade = [];
 foreach ($subjects as $array) {
 	$actualGrade[] = (int)$array['grade'];
 }
-var_dump($actualGrade);
+//var_dump($actualGrade);
 
 
 function calculateAverage($actualGrade) {
 	$total = array_sum($actualGrade);
-	echo $total, PHP_EOL;
+	//echo $total, PHP_EOL;
 	$average = 0;
 	$average = $total / count($actualGrade);
 	return $average;

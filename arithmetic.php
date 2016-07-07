@@ -2,27 +2,57 @@
 
 function add($a, $b)
 {
-    return $a + $b;
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.");
+	} else {
+		return $a + $b;
+	}
 }
 
 function subtract($a, $b)
 {
-    return $a - $b;
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.");
+	} else {
+		return $a - $b;
+	} 
 }
 
 function multiply($a, $b)
 {
-    return $a * $b;
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.");
+	} else {
+    	return $a * $b;
+	}
 }
 
 function divide($a, $b)
 {
-    return $a / $b;
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.");
+	} else {
+    	return $a / $b;
+    }
 }
 
 function modulus($a, $b)
 {
-	return $a % $b;
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.");
+	} else {
+		return $a % $b;
+	}
 }
 // Add code to test your functions here
 
