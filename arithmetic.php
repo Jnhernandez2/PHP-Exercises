@@ -2,26 +2,28 @@
 
 function add($a, $b)
 {
-	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit;
-	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit;
-	}
+	// if (!is_numeric($a)) {
+	// 	fwrite(STDERR, "$a should be a numeric value.\n");
+	// 	exit;
+	// } elseif (!is_numeric($b)) {
+	// 	fwrite(STDERR, "$b should be a numeric value.\n");
+	// 	exit;
+	// }
+	throwErrorMessage($a, $b);
 
 	return $a + $b;
 }
 
 function subtract($a, $b)
 {
-	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit;
-	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit;
-	}
+	// if (!is_numeric($a)) {
+	// 	fwrite(STDERR, "$a should be a numeric value.\n");
+	// 	exit;
+	// } elseif (!is_numeric($b)) {
+	// 	fwrite(STDERR, "$b should be a numeric value.\n");
+	// 	exit;
+	// }
+	throwErrorMessage($a, $b);
 
 	return $a - $b;
 	 
@@ -29,13 +31,14 @@ function subtract($a, $b)
 
 function multiply($a, $b)
 {
-	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit;
-	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit;
-	}
+	// if (!is_numeric($a)) {
+	// 	fwrite(STDERR, "$a should be a numeric value.\n");
+	// 	exit;
+	// } elseif (!is_numeric($b)) {
+	// 	fwrite(STDERR, "$b should be a numeric value.\n");
+	// 	exit;
+	// }
+	throwErrorMessage($a, $b);
 
     return $a * $b;
 	
@@ -43,17 +46,18 @@ function multiply($a, $b)
 
 function divide($a, $b)
 {
-	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit;
-	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit;
-	}
+	// if (!is_numeric($a)) {
+	// 	fwrite(STDERR, "$a should be a numeric value.\n");
+	// 	exit;
+	// } elseif (!is_numeric($b)) {
+	// 	fwrite(STDERR, "$b should be a numeric value.\n");
+	// 	exit;
+	// }
 
-	if ($a == 0 || $b == 0) {
-		fwrite(STDERR, "You cannot divide by zero.\n")
-	}
+	// if ($a == 0 || $b == 0) {
+	// 	fwrite(STDERR, "You cannot divide by zero.\n");
+	// }
+	throwErrorMessage($a, $b);
 
     return $a / $b;
     
@@ -61,17 +65,35 @@ function divide($a, $b)
 
 function modulus($a, $b)
 {
-	if (!is_numeric($a)) {
-		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit;
-	} elseif (!is_numeric($b)) {
-		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit;
-	}
-
+	// if (!is_numeric($a)) {
+	// 	fwrite(STDERR, "$a should be a numeric value.\n");
+	// 	exit;
+	// } elseif (!is_numeric($b)) {
+	// 	fwrite(STDERR, "$b should be a numeric value.\n");
+	// 	exit;
+	// }
+	throwErrorMessage($a, $b);
+	
 	return $a % $b;
 	
 }
+
+function throwErrorMessage($a, $b)
+{
+	if (!is_numeric($a)) {
+		fwrite(STDERR, "$a should be a numeric value.\n");
+		exit("Exiting Program");
+	} elseif (!is_numeric($b)) {
+		fwrite(STDERR, "$b should be a numeric value.\n");
+		exit("Exiting Program");
+	}
+
+	if ($a == 0 || $b == 0) {
+		fwrite(STDERR, "You cannot divide by zero.\n");
+		exit("Exiting Program");
+	}
+}
+
 // Add code to test your functions here
 
 echo add(12, 15), PHP_EOL;
