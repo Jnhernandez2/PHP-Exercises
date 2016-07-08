@@ -82,21 +82,21 @@ function throwErrorMessage($a, $b)
 {
 	if (!is_numeric($a)) {
 		fwrite(STDERR, "$a should be a numeric value.\n");
-		exit("Exiting Program");
+		exit("Exiting Program\n");
 	} elseif (!is_numeric($b)) {
 		fwrite(STDERR, "$b should be a numeric value.\n");
-		exit("Exiting Program");
+		exit("Exiting Program\n");
 	}
 
 	if ($a == 0 || $b == 0) {
 		fwrite(STDERR, "You cannot divide by zero.\n");
-		exit("Exiting Program");
+		exit("Exiting Program\n");
 	}
 }
 
 // Add code to test your functions here
 
-echo add(12, 15), PHP_EOL;
+echo add(13, 15), PHP_EOL;
 echo subtract(37, 15), PHP_EOL;
 echo multiply(73, 25), PHP_EOL;
 echo divide(36, 3), PHP_EOL;
