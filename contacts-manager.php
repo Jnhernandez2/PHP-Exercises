@@ -44,9 +44,13 @@ function formatContacts($contactInfo) {
 
 $table = formatContacts($contactInfo);
 
-function addContacts($filename, $name, $number) {
-   $appendedContacts = file_put_contents($filename, $name . '|' . $number, FILE_APPEND);
-   return $appendedContacts;
+function addContacts($name, $number) {
+    $filename = 'contacts.txt';
+    $current = file_get_contents($filename);
+    $current .= $name . '|' . $number;
+    file_put_contents($filename, $current, FILE_APPEND);
+    
+    return $filename;
 }
 
 
@@ -113,8 +117,7 @@ function optionTwo($userInput, $contactInfo) {
             $number = trim(fgets(STDIN));
             if (is_numeric($number)) {
                 if (strlen($number == 10)) {
-                    $filename = 'contacts.txt';
-                    print_r(addContacts($filename, $name, $number));
+                    addContacts($name, $number);
                     print_r(formatContacts($contactInfo));
                 }
             }
