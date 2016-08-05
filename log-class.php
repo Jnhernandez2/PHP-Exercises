@@ -2,13 +2,22 @@
 
 class Log
 {
-	public $filename;
+	private $filename;
 
-	public $handle;
+	private $handle;
 
-	public $date ;
+	private $date;
 
-	public $time;
+	private $time;
+
+	public function setFilename() {
+
+		if is_string($this->filename) {
+
+			return $this->filename;
+		}
+
+	}
 
 	public function __construct($prefix = 'log') {
 
