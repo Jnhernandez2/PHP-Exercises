@@ -4,6 +4,8 @@ class Model {
 	
 	private $attributes = [];
 
+	protected static $table;
+
 	public function __set($name, $value) {
 
 		$this->attributes[$name] = $value;
@@ -23,6 +25,13 @@ class Model {
 		}
 
 	}
+
+	public static function getTableName() {
+
+		return static::$table;
+
+	}
+
 }
 
 $shirly = new Model();
